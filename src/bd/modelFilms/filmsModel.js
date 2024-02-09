@@ -1,5 +1,6 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const { DataTypes, Model } = require('sequelize');
+const sequelize = require('../bd');
+
 
 class film extends Model {}
 film.init({
