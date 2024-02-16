@@ -16,7 +16,14 @@ require('./bd/associations');
 
 app.use(express.json());
 const routes = require("./routes/filmsRoutes");
+const routesD = require("./routes/directorsRoutes");
+
+
+
+
 app.use("/peliculas", routes);
+app.use("/director", routesD);
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

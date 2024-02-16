@@ -12,11 +12,9 @@ film.init({
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate:{
         unique: {
           args: true,
           msg: 'Title already exists'
-        }
       },
     },
   description: {
@@ -25,10 +23,6 @@ film.init({
   },
   score: {
     type: DataTypes.CHAR
-    // allowNull defaults to true
-  },
-  director: {
-    type: DataTypes.STRING
     // allowNull defaults to true
   }
 }, {
