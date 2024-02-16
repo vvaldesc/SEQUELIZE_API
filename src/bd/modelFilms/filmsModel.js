@@ -5,21 +5,26 @@ const sequelize = require('../bd');
 class film extends Model {}
 film.init({
   // Model attributes are defined here
-  ide: {
+  id: {
     type: DataTypes.INTEGER,
-    primaryKey: true,
-    allowNull: false
+    primaryKey: true
   },
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        unique: {
+          args: true,
+          msg: 'Title already exists'
+        }
+      },
+    },
   description: {
     type: DataTypes.STRING
     // allowNull defaults to true
   },
   score: {
-    type: DataTypes.STRING
+    type: DataTypes.CHAR
     // allowNull defaults to true
   },
   director: {

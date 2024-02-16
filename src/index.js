@@ -22,6 +22,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("express escuchando en el puerto 👍 " + PORT);
   sequelize
-    .sync({force : false})
+    .sync({force : true})
     .catch((error) => { console.log(error) });
 });
