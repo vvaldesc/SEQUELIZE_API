@@ -8,9 +8,9 @@ const getAllDirectors = async (req,res) => {
 
 
  const postCreateFilm = async (req,res) => { 
-    const allDirectors = await services.createDirectors();
+    const allDirectors = await services.createDirector();
     res.json(allDirectors);
  };
 
 
- module.exports = {getAllDirectors};
+ module.exports = {getAllDirectors, postCreateFilm};

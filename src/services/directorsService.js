@@ -1,4 +1,4 @@
-const Directors = require("../bd/modelDirectors/directorModel")
+const Directors = require("../bd/models/directorModel")
 
 const getAllDirectors = async() => {
     const allDirectors = await Directors.getAll();
@@ -11,4 +11,4 @@ const createDirector = async (directorData) => {
 }
 
 
-module.exports = { getAllDirectors };
+module.exports = { getAllDirectors,createDirector };
