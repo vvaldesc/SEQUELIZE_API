@@ -7,10 +7,10 @@ const getAllFilms = async (req,res) => {
  };
 
 
- const postCreateFilm = async (req,res) => { 
+ /*const postCreateFilm = async (req,res) => { 
     const allFilms = await services.createFilm();
     res.json(allFilms);
- };
+ };*/
 
 
  module.exports = {getAllFilms};

@@ -1,10 +1,10 @@
 const rutasExpress = require("express").Router();
 
-const directorescontroller = require("../controllers/directorsControllers");
+const directorescontroller = require("../controllers/directorsController");
 
 
 rutasExpress.get("/",directorescontroller.getAllDirectors)
-rutasExpress.post("/",directorescontroller.postCreateFilm)
+//rutasExpress.post("/",directorescontroller.postCreateFilm)
 
 
 module.exports = rutasExpress;

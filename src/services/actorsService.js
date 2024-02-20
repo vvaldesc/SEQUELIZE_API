@@ -1,6 +1,6 @@
-const Actor = require("../bd/models/actorsModel")
+const Actor = require("../bd/models/actorModel")
 
-const getAllActor = async() => {
+const getAllActors = async() => {
     const allActor = await Actor.getAll();
     return allActor[0];
 }
@@ -11,4 +11,4 @@ const createActor= async (directorData) => {
 }
 
 
-module.exports = { getAllActors,createActors };
+module.exports = { getAllActors,createActor };

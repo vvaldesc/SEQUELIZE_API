@@ -1,4 +1,4 @@
-const Films = require("../bd/modelFilms/filmsModel")
+const Films = require("../bd/models/filmsModel")
 
 const getAllFilms = async() => {
     const allempleados = await Films.getAll();

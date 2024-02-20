@@ -1,6 +1,6 @@
 const rutasExpress = require("express").Router();
 
-const actorscontroller = require("../controllers/actorsControllers");
+const actorscontroller = require("../controllers/actorsController");
 
 
 rutasExpress.get("/",actorscontroller.getAllActors)
