@@ -1,7 +1,7 @@
-const Actor = require("../bd/models/actorModel")
+const Actor = require("../../bd/models/actorModel")
 
 const getAllActors = async() => {
-    const allActor = await Actor.getAll();
+    const allActor = await Actor.findAll();
     return allActor[0];
 }
 

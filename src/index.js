@@ -1,4 +1,4 @@
-const sequelize = require('./bd/bd');
+const sequelize = require('../bd/bd');
 const express = require('express');
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-require('./bd/associations');
+require('../bd/associations');
 
 app.use(express.json());
 

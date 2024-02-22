@@ -1,4 +1,4 @@
-const Directors = require("../bd/models/directorModel")
+const Directors = require("../../bd/models/directorModel")
 
 const getAllDirectors = async() => {
     const allDirectors = await Directors.getAll();
