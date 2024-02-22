@@ -1,4 +1,6 @@
 const sequelize = require('../bd/bd');
+
+const bodyParser = require('body-parser');
 const express = require('express');
 
 const app = express();
@@ -15,6 +17,7 @@ app.use(function (req, res, next) {
 require('../bd/associations');
 
 app.use(express.json());
+app.use(bodyParser.json());
 
 const routesFilms = require("./routes/filmsRoutes");
 const routesDirectors = require("./routes/directorsRoutes");

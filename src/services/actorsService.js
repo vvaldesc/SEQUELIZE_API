@@ -2,10 +2,10 @@ const Actor = require("../../bd/models/actorModel")
 
 const getAllActors = async() => {
     const allActor = await Actor.findAll();
-    return allActor[0];
+    return allActor;
 }
 
-const createActor= async (directorData) => {
+const createActor= async (actorData) => {
     const newActor = await Actor.create(actorData);
     return newActor;
 }

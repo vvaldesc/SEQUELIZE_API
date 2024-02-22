@@ -8,7 +8,7 @@ const getAllActors = async (req,res) => {
 
 
  const postCreateActor = async (req,res) => { 
-    const allActors = await services.createActor();
+    const allActors = await services.createActor(req.body);
     res.json(allActors);
  };
 
